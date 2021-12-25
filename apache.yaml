@@ -1,6 +1,5 @@
 - hosts: webserver
-  remote_user: ec2-user
-  gather_facts: No
+  become: true
   tasks: 
   - name: installing httpd package
     yum: name=httpd state=present
