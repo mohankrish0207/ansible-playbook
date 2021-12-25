@@ -8,4 +8,4 @@
     service: name=httpd state=started
   
   - name: copy the source file to /var/www/html
-    copy: src=/root/index.html dest=/var/www/html/index.html
+    copy: src=index.html dest=/var/www/html/index.html
