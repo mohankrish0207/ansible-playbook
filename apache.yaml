@@ -1,5 +1,5 @@
-hosts: webserver
-remote_user: ec2-user
+- hosts: webserver
+  remote_user: ec2-user
   gather_facts: No
   tasks: 
   - name: installing httpd package
@@ -7,7 +7,6 @@ remote_user: ec2-user
     
   - name: starting the httpd service
     service: name=httpd state=started
-    
+  
   - name: copy the source file to /var/www/html
-    copy: src=index.html dest=/var/www/html/index.html
-    
+    copy: src=/root/index.html dest=/var/www/html/index.html
